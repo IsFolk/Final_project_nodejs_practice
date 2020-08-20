@@ -19,7 +19,7 @@ app.use(express.static('./public'));
 app.set('view engine', 'ejs');  
 app.get('/', async (req, res) => {  
     //let data = await db.collection('classA').get();
-    let userArr = ["/Sarah\n","/firebase-test\n","/classA_backend\n","/classA_fronted\n","/who/:name\n","/API/deleteMember","/API/addMember"];
+    let userArr = ["/Sarah\n","/firebase-test\n","/classA_backend\n","/classA_frontend\n","/who/:name\n","/API/deleteMember","/API/addMember"];
     // data.forEach((doc) => {
     //     console.log(doc.data().name)
     //     userArr.push(doc.data().name);
@@ -66,7 +66,7 @@ app.get("/classA_frontend", (req, res) => {
         root:  __dirname+"/public",
         dotfiles: 'ignore'
     }
-    console.log(__dirname+"/public");
+    //console.log(__dirname+"/public");
     res.sendFile("/classA.html", options);
 })
 
