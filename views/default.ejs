@@ -6,10 +6,15 @@
         <link rel="stylesheet" href="styles.css">
     </head>  
     <body>  
-        <h1><%= title %></h1>    
+        <h1><%= title %></h1>
+        <style>
+            ul li{
+                font-size: 40px
+            }
+        </style>
         <ul>  
             <% for(let i=0; i<users.length; i++) {%>  
-                <li style = "font-size: 50px;"><%= users[i] %></li>  
+                <li><%= users[i] %></li>  
             <% } %>  
         </ul>
     </body>  
