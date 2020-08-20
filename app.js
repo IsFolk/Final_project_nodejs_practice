@@ -19,13 +19,19 @@ app.use(express.static('./public'));
 app.set('view engine', 'ejs');  
 app.get('/', async (req, res) => {  
     //let data = await db.collection('classA').get();
-    let userArr = ["/Sarah\n","/firebase-test\n","/classA_backend\n","/classA_frontend\n","/who/name\n","/API/deleteMember","/API/addMember"];
+    let userArr = ["自己名稱：/Sarah\n",
+                    "Firebase測試：/firebase-test\n",
+                    "後端控制：/classA_backend\n",
+                    "前端控制：/classA_frontend\n",
+                    "輸入變數姓名：/who/name\n",
+                    "刪除一筆資料：/API/deleteMember?id=欲輸入id",
+                    "新增一筆資料：/API/addMember?name=欲輸入姓名&gender=欲輸入性別&age=欲輸入性別"];
     // data.forEach((doc) => {
     //     console.log(doc.data().name)
     //     userArr.push(doc.data().name);
     // })
     res.render('default', {  
-        title: '指令',  
+        title: '可用指令',  
         // users: ['Fisheep', 'Fiona', 'Alice', 'Bob']
         users: userArr
     });  
