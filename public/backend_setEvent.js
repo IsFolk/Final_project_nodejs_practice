@@ -15,7 +15,7 @@ for(let i = 0 ; i < cross.length; i ++){
 }
 // add data
 form.addEventListener('submit', async (e) => {
-    //e.preventDefault();
+    e.preventDefault();
     // call add api
     name    = form.name.value,
     gender  = form.gender.value,
