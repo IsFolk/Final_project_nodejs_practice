@@ -20,7 +20,7 @@ form.addEventListener('submit', async (e) => {
     name    = form.name.value,
     gender  = form.gender.value,
     age     = form.age.value
-    let apiUrl = `http://127.0.0.1:3000/API/addMember?name=${name}&gender=${gender}&age=${age}`
+    let apiUrl = `https://nodejs-practice2020.herokuapp.com/API/addMember?name=${name}&gender=${gender}&age=${age}`
     let res = await fetch(apiUrl, {method:'GET'});
     let text = await res.text();
     console.log(text);

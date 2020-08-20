@@ -84,8 +84,8 @@ app.get('/API/deleteMember', (req, res) => {
 app.get('/API/addMember', (req, res) => {
     db.collection('classA').add({
         name: req.query.name,
-        gender: req.query.age,
-        age: req.query.gender
+        gender: req.query.gender,
+        age: req.query.age
     });
     console.log("Add member !!");
     res.send("Add member success!");
