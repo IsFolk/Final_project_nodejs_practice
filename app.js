@@ -1,17 +1,19 @@
 let express = require('express');
 let firebase = require('firebase')
+// Your web app's Firebase configuration
 var firebaseConfig = {
-    apiKey: "AIzaSyDxCLJkEfGrDxup6-ROtrYbC_m7ocgqllE",
-    authDomain: "nodejs-class-practice.firebaseapp.com",
-    databaseURL: "https://nodejs-class-practice.firebaseio.com",
-    projectId: "nodejs-class-practice",
-    storageBucket: "nodejs-class-practice.appspot.com",
-    messagingSenderId: "1015240617673",
-    appId: "1:1015240617673:web:a1c2928cbe704d4baa2718",
-    measurementId: "G-KHL0Y789PP"
+    apiKey: "AIzaSyAUfTR_cmYn3fcv9kbH72gvunhFUykNfGk",
+    authDomain: "myproject-4deff.firebaseapp.com",
+    databaseURL: "https://myproject-4deff.firebaseio.com",
+    projectId: "myproject-4deff",
+    storageBucket: "myproject-4deff.appspot.com",
+    messagingSenderId: "743442785939",
+    appId: "1:743442785939:web:134ba7062c459322fecf66",
+    measurementId: "G-T3891TSH0L"
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
+firebase.analytics();
 let db = firebase.firestore();
 let app = express();
 app.use(express.static('./public'));
