@@ -18,21 +18,21 @@ let app = express();
 app.use(express.static('./public'));
 app.set('view engine', 'ejs');  
 app.get('/', async (req, res) => {  
-    let data = await db.collection('classA').get();
-    let userArr = []
-    data.forEach((doc) => {
-        console.log(doc.data().name)
-        userArr.push(doc.data().name);
-    })
+    //let data = await db.collection('classA').get();
+    let userArr = ["/Sarah\n","/firebase-test\n","/classA_backend\n","/classA_fronted\n","/who/:name\n","/API/deleteMember","/API/addMember"];
+    // data.forEach((doc) => {
+    //     console.log(doc.data().name)
+    //     userArr.push(doc.data().name);
+    // })
     res.render('default', {  
-        title: '首頁',  
+        title: '指令',  
         // users: ['Fisheep', 'Fiona', 'Alice', 'Bob']
         users: userArr
     });  
 });
 
-app.get("/Fisheep", (req, res) => {
-    res.send("<h1>Fisheep</h1>")
+app.get("/Sarah", (req, res) => {
+    res.send("<h1>Sarah</h1>")
 })
 
 app.get("/firebase-test", async (req, res) => {
