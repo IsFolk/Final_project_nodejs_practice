@@ -5,7 +5,7 @@ for(let i = 0 ; i < cross.length; i ++){
         test.stopPropagation();
         let id = cross[i].getAttribute('cross-id');
         console.log(id);
-        let apiUrl = `http://127.0.0.1:3000/API/deleteMember?id=${id}`
+        let apiUrl = `https://nodejs-practice2020.herokuapp.com/API/deleteMember?id=${id}`
         let res = await fetch(apiUrl, {method:'GET'});
         let text = await res.text();
         console.log(text);
@@ -15,7 +15,7 @@ for(let i = 0 ; i < cross.length; i ++){
 }
 // add data
 form.addEventListener('submit', async (e) => {
-    e.preventDefault();
+    //e.preventDefault();
     // call add api
     name    = form.name.value,
     gender  = form.gender.value,
