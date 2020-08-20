@@ -1,5 +1,5 @@
 let express = require('express');
-let firebase = require('firebase')
+let firebase = require('firebase');
 // Your web app's Firebase configuration
 var firebaseConfig = {
     apiKey: "AIzaSyAUfTR_cmYn3fcv9kbH72gvunhFUykNfGk",
@@ -13,7 +13,6 @@ var firebaseConfig = {
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
-firebase.analytics();
 let db = firebase.firestore();
 let app = express();
 app.use(express.static('./public'));
